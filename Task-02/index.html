@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskForge — Contact &amp; Productivity Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ NAVIGATION (Flexbox) ============ -->
+  <header class="navbar">
+    <div class="nav-brand">
+      <span class="nav-logo">⬡</span>
+      <span class="nav-title">TaskForge</span>
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active-link">Home</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="#todo" class="nav-link">To-Do List</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="eyebrow">Intermediate Web Dev Project</p>
+      <h1>Build it once.<br />Make it respond to everything.</h1>
+      <p class="hero-sub">
+        A single page that demonstrates a validated contact form, a responsive
+        Flexbox + Grid layout, and a fully dynamic to-do list — all wired up
+        with vanilla JavaScript and DOM manipulation.
+      </p>
+      <a href="#contact" class="btn btn-primary">Get Started ↓</a>
+    </div>
+  </section>
+
+  <!-- ============ MAIN CONTENT GRID ============ -->
+  <main class="content-grid">
+
+    <!-- ---------- CONTACT FORM ---------- -->
+    <section class="card form-card" id="contact">
+      <h2>Contact Us</h2>
+      <p class="card-sub">Fill out the form below — every field is validated in real time.</p>
+
+      <form id="contactForm" novalidate>
+
+        <div class="form-group">
+          <label for="name">Full Name <span class="req">*</span></label>
+          <input type="text" id="name" name="name" placeholder="e.g. Aman Kumar" />
+          <span class="error-message" id="nameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address <span class="req">*</span></label>
+          <input type="email" id="email" name="email" placeholder="e.g. aman@example.com" />
+          <span class="error-message" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="e.g. 9876543210" />
+          <span class="error-message" id="phoneError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject <span class="req">*</span></label>
+          <select id="subject" name="subject">
+            <option value="">-- Select a subject --</option>
+            <option value="general">General Inquiry</option>
+            <option value="support">Technical Support</option>
+            <option value="feedback">Feedback</option>
+          </select>
+          <span class="error-message" id="subjectError"></span>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="message">Message <span class="req">*</span></label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+          <span class="error-message" id="messageError"></span>
+        </div>
+
+        <div class="form-group full-width checkbox-group">
+          <input type="checkbox" id="agree" name="agree" />
+          <label for="agree" class="checkbox-label">I agree to the terms and conditions <span class="req">*</span></label>
+          <span class="error-message" id="agreeError"></span>
+        </div>
+
+        <div class="form-actions full-width">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <button type="reset" class="btn btn-secondary" id="resetBtn">Clear</button>
+        </div>
+
+        <p class="form-success" id="formSuccess">✓ Message sent successfully!</p>
+      </form>
+    </section>
+
+    <!-- ---------- TO-DO LIST ---------- -->
+    <section class="card todo-card" id="todo">
+      <h2>My To-Do List</h2>
+      <p class="card-sub">Add, complete, and remove tasks dynamically.</p>
+
+      <form id="todoForm" class="todo-input-row">
+        <input type="text" id="todoInput" placeholder="What needs to be done?" autocomplete="off" />
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+
+      <div class="todo-filters">
+        <button class="filter-btn active-filter" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+
+      <ul class="todo-list" id="todoList"></ul>
+
+      <div class="todo-footer">
+        <span id="todoCount">0 tasks left</span>
+        <button id="clearCompleted" class="link-btn">Clear completed</button>
+      </div>
+    </section>
+
+    <!-- ---------- IMAGE GALLERY (Grid) ---------- -->
+    <section class="card gallery-card" id="gallery">
+      <h2>Image Gallery</h2>
+      <p class="card-sub">Add an image by URL and remove any image dynamically.</p>
+
+      <form id="galleryForm" class="gallery-input-row">
+        <input type="url" id="imageUrlInput" placeholder="Paste an image URL..." />
+        <button type="submit" class="btn btn-primary">Add Image</button>
+      </form>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- images injected by JS -->
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 TaskForge — Built with HTML, CSS &amp; JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
