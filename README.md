@@ -12,6 +12,7 @@ Here is the breakdown of what I have learned and built so far:
 | :--- | :--- | :--- | :--- |
 | 🟢 [Task 1: Basics](./Task-01-Basics) | Beginner | HTML5, CSS3, JavaScript (Basics) | Semantic HTML, webpage structure, basic styling, and introductory JS logic. |
 | 🟡 [Task 2: Intermediate](./Task-02-Intermediate) | Intermediate | HTML, CSS, JavaScript | Flexbox/Grid, Responsive Media Queries, and Advanced DOM Manipulation using JS. |
+| 🔵 [Task 3: Advanced Frontend](./Task-03-Advanced) | Advanced | HTML, CSS, JavaScript (Async/APIs) | Asynchronous JS, API Integration, Advanced UI Animations, and Glassmorphism Design. |
 
 ---
 
@@ -31,7 +32,15 @@ Here is the breakdown of what I have learned and built so far:
 * **Key Concepts:**
   * **Advanced CSS:** Creating flexible layouts using Flexbox and CSS Grid.
   * **Responsiveness:** Using Media Queries to make it mobile-friendly.
-  * **JavaScript:** Event listeners, dynamically updating the UI, and handling user input.
+  * **JavaScript:** Event listeners, dynamically updating the UI, and handling user input (Interactive Quiz and Image Carousel).
+
+### 📁 [Task-03-Advanced](./Task-03-Advanced)
+* **Focus:** Asynchronous operations, complex UI synchronization, and external data fetching.
+* **Tech Stack:** HTML5, CSS3 (Modern Theme), JavaScript (Fetch API / Async-Await)
+* **Key Concepts:**
+  * **Asynchronous JS:** Handling promises, `fetch()`, and `async/await` blocks with robust error handling.
+  * **API Integration:** Fetching live data from third-party public APIs (e.g., Live Weather updates) and managing dynamic loading spinners.
+  * **Premium UI Design:** Implementing modern themes (Dark Glassmorphic layout, micro-interactions, CSS keyframe animations, and custom text gradients).
 
 ---
 *Happy Coding! 💻*

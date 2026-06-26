@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Dashboard & Quiz UI</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="app-header">
+    <div class="header-badge">v2.0 Live</div>
+    <h1>Advanced Frontend Project</h1>
+    <p class="subtitle">Interactive Dashboard Hub</p>
+  </header>
+
+  <main class="main-container">
+    
+    <div class="left-column">
+      
+      <section class="card carousel-section">
+        <div class="card-header">
+          <h2>Interactive Carousel</h2>
+          <span class="pulse-dot"></span>
+        </div>
+        <div class="carousel">
+          <div class="carousel-images">
+            <img src="https://picsum.photos/id/10/600/330" alt="Image 1" class="active">
+            <img src="https://picsum.photos/id/20/600/330" alt="Image 2">
+            <img src="https://picsum.photos/id/30/600/330" alt="Image 3">
+          </div>
+          <button class="nav-btn prev-btn" aria-label="Previous">❮</button>
+          <button class="nav-btn next-btn" aria-label="Next">❯</button>
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card quiz-section">
+        <div class="card-header">
+          <h2>Interactive Coding Quiz</h2>
+          <div class="quiz-badge">Tech Trivia</div>
+        </div>
+        <div id="quiz-container">
+          <div id="question-box">
+            <h3 id="question-text">Question text goes here...</h3>
+            <div id="options-container" class="options-grid">
+              </div>
+          </div>
+          <div id="result-box" class="hidden">
+            <div class="celebration-icon">🎉</div>
+            <h3>Quiz Completed!</h3>
+            <p id="score-text">You scored 0 out of 0</p>
+            <button id="restart-btn" class="btn btn-primary">Play Again</button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="right-column">
+      
+      <section class="card api-section">
+        <div class="card-header">
+          <h2>Live Weather</h2>
+          <div class="live-tag">Live</div>
+        </div>
+        <div id="weather-container">
+          <div id="loading-text" class="spinner-box">
+            <div class="circle-spinner"></div>
+            <p>Fetching satellite data...</p>
+          </div>
+          <div id="weather-data" class="hidden">
+            <h3 id="location">City, Country</h3>
+            <p id="temperature">--°C</p>
+            <p id="condition">Condition</p>
+          </div>
+        </div>
+        <button id="refresh-btn" class="btn btn-secondary">Refresh Data</button>
+      </section>
+
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
